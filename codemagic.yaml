@@ -14,7 +14,7 @@ workflows:
         XCODE_SCHEME: "CodeGames" # Убедитесь, что имя схемы указано правильно
         APP_STORE_APPLE_ID: 6747379423
         TEAM_ID: "Q6HCVCF2N3"  # Ваш Team ID
-      xcode: 16.0
+      xcode: 16.3
     scripts:
       - name: Set up provisioning profiles settings on Xcode project
         script: xcode-project use-profiles

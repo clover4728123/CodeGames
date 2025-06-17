@@ -51,7 +51,7 @@ struct MainScreen: View {
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            Image(.mainBackground)
+            Image("mainBackground")
                 .resizable()
                 .ignoresSafeArea()
         )
