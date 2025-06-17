@@ -44,7 +44,7 @@ struct LevelListingScreen: View {
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            Image(.levelsBackground)
+            Image("levelsBackground")
                 .resizable()
                 .ignoresSafeArea()
         )
