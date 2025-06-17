@@ -99,9 +99,11 @@ struct WordDecoderScreen: View {
                     Button {
                         viewModel.checkSolution()
                     } label: {
-                        Image(.checkButton)
+                        Image(viewModel.showWrongAttempt ? .wrongButton : .checkButton)
                             .resizable()
                             .scaledToFit()
+                            .animation(.easeInOut(duration: 0.3), value: viewModel.showWrongAttempt)
+
                     }
 
                     Button {

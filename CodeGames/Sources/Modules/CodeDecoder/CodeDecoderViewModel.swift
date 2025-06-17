@@ -9,6 +9,8 @@ class CodeDecoderViewModel: ObservableObject {
     @Published var isUnlocked: Bool = false
     @Published var currentLevel: Int
     @Published var maxLevel: Int = 8
+    @Published var showWrongAttempt: Bool = false
+
     
     @Published var timeRemaining: Int = 60
     private var timer: Timer?
@@ -33,9 +35,14 @@ class CodeDecoderViewModel: ObservableObject {
     }
 
     func checkCombination() {
-        isUnlocked = (disks == targetCombination)
-        if isUnlocked {
+        if disks == targetCombination {
+            isUnlocked = true
             stopTimer()
+        } else {
+            showWrongAttempt = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWrongAttempt = false
+            }
         }
     }
 
@@ -65,7 +72,7 @@ class CodeDecoderViewModel: ObservableObject {
                 self.timeRemaining -= 1
             } else {
                 self.timer?.invalidate()
-                self.resetLevel()
+                self.isUnlocked = true
             }
         }
     }

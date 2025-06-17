@@ -100,10 +100,12 @@ struct CodeDecoderScreen: View {
                         .resizable()
                         .scaledToFit()
                 } else {
-                    Image(.closeButton)
+                    Image(viewModel.showWrongAttempt ? .wrongButton : .closeButton)
                         .resizable()
                         .scaledToFit()
+                        .animation(.easeInOut(duration: 0.3), value: viewModel.showWrongAttempt)
                 }
+
                 Spacer()
                 HStack {
                     Button {

@@ -17,6 +17,9 @@ class WordDecoderViewModel: ObservableObject {
     private let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     private let maxLevel = 8
     private var shift: Int = 0
+    
+    @Published var showWrongAttempt: Bool = false
+
 
     init(id: String, currentLevel: Int) {
         self.id = id
@@ -46,6 +49,10 @@ class WordDecoderViewModel: ObservableObject {
             timer?.invalidate()
         } else {
             isSolved = false
+            showWrongAttempt = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showWrongAttempt = false
+            }
         }
     }
 
@@ -78,7 +85,7 @@ class WordDecoderViewModel: ObservableObject {
     }
 
     private func handleTimeout() {
-        isSolved = false
+        isSolved = true
     }
 }
 
