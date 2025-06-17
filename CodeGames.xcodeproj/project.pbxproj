@@ -15,8 +15,6 @@
 		2795AE9A2DFAE67800842441 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AE992DFAE67800842441 /* FirebaseAuth */; };
 		2795AE9C2DFAE67800842441 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AE9B2DFAE67800842441 /* FirebaseCore */; };
 		2795AE9E2DFAE67800842441 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AE9D2DFAE67800842441 /* FirebaseFirestore */; };
-		2795AEA02DFAE67800842441 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AE9F2DFAE67800842441 /* FirebaseFunctions */; };
-		2795AEA22DFAE67800842441 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AEA12DFAE67800842441 /* FirebaseRemoteConfig */; };
 		2795AEAB2DFAE78B00842441 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2795AEAA2DFAE78B00842441 /* RealmSwift */; };
 		2795AEAC2DFAE79400842441 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2795AEAA2DFAE78B00842441 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -68,14 +66,12 @@
 				2795AE902DFAE67800842441 /* FirebaseAnalytics in Frameworks */,
 				2795AE9A2DFAE67800842441 /* FirebaseAuth in Frameworks */,
 				2795AE982DFAE67800842441 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				2795AEA02DFAE67800842441 /* FirebaseFunctions in Frameworks */,
 				2795AE922DFAE67800842441 /* FirebaseAnalyticsCore in Frameworks */,
 				2795AE9C2DFAE67800842441 /* FirebaseCore in Frameworks */,
 				2795AE9E2DFAE67800842441 /* FirebaseFirestore in Frameworks */,
 				2795AE942DFAE67800842441 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
 				2795AEAB2DFAE78B00842441 /* RealmSwift in Frameworks */,
 				2795AE962DFAE67800842441 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				2795AEA22DFAE67800842441 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +123,6 @@
 				2795AE992DFAE67800842441 /* FirebaseAuth */,
 				2795AE9B2DFAE67800842441 /* FirebaseCore */,
 				2795AE9D2DFAE67800842441 /* FirebaseFirestore */,
-				2795AE9F2DFAE67800842441 /* FirebaseFunctions */,
-				2795AEA12DFAE67800842441 /* FirebaseRemoteConfig */,
 				2795AEAA2DFAE78B00842441 /* RealmSwift */,
 			);
 			productName = CodeGames;
@@ -469,16 +463,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2795AE8E2DFAE67800842441 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		2795AE9F2DFAE67800842441 /* FirebaseFunctions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2795AE8E2DFAE67800842441 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFunctions;
-		};
-		2795AEA12DFAE67800842441 /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2795AE8E2DFAE67800842441 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfig;
 		};
 		2795AEAA2DFAE78B00842441 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
