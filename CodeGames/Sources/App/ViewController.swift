@@ -21,5 +21,36 @@ class ViewController: UIViewController {
             hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
+    
+    func openApp() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            print("open app")
+            let onboardingScreen = RootScreen()
+            let hostingController = UIHostingController(rootView: onboardingScreen)
+            self.setRootViewController(hostingController)
+        }
+    }
+    
+    func openWeb(stringURL: String) {
+        DispatchQueue.main.async {
+            print("open web")
+            let webView = SecViewController(url: stringURL)
+            self.setRootViewController(webView)
+        }
+    }
+    
+    func setRootViewController(_ viewController: UIViewController) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.window?.rootViewController = viewController
+        }
+    }
+    
+    func createURL(mainURL: String, deviceID: String, advertiseID: String) -> (String) {
+        var url = ""
+        
+        url = "\(mainURL)?asxz=\(deviceID)&qwed=\(advertiseID)"
+        
+        return url
+    }
 }
 

@@ -7,9 +7,9 @@ struct OnboardingScreen: View {
     @State private var isLoading = false
 
     var body: some View {
-        if isLoading {
-            RootScreen()
-        } else {
+//        if isLoading {
+//            RootScreen()
+//        } else {
             VStack {
                 Text("loading...")
                     .foregroundStyle(.white)
@@ -34,14 +34,14 @@ struct OnboardingScreen: View {
                     .resizable()
                     .ignoresSafeArea()
             )
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    withAnimation {
-                        isLoading = true
-                    }
-                }
-            }
-        }
+//            .onAppear {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                    withAnimation {
+//                        isLoading = true
+//                    }
+//                }
+//            }
+//        }
     }
 }
 
